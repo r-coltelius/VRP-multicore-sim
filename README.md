@@ -1,25 +1,27 @@
-Inledning
-Vehicle routing problem är ett välkänt problem som många företag kämpar med. 
+## Inledning
+Vehicle routing problem (VRP) är ett välkänt problem som många företag kämpar med. 
 I detta projekt löses ett sådant problem utifrån ett statistiskt förhållningssätt,
 där det antas existera ett godtyckligt antal producenter och konsumenter med en 
 varierande produktion och konsumtion som antas vara stokastiska poissonfördelade variabler. 
 Konsumenterna och producenter antas existera i Sverige och kan väljas godtyckligt. 
 
-Kod
+## Kod
 I koden är antalet producenter (fabriker) och konsumenter (grossister) förinställt till 3 
-respektive 8, men kan väljas godtyckligt i main.py genom att ändra parametrarna till Graph(x, y). 
+respektive 8, men kan väljas godtyckligt i 'main.py' genom att ändra parametrarna till 'Graph(x, y)'. 
 
-Om en önskar att få en optimerade lösning utifrån PyVRP väljs mode = 0 i main.py. Om n simuleringar 
-av mode = 0 önskas väljs mode = 1 där n väljs godtyckligt. Observera att en stor simulering kan ta 
-några minuter. Därför har Process Pool Executor används för att utnyttja fler processorkärnor. 
+Om en önskar att få en optimerade lösning utifrån PyVRP väljs 'mode = 0' i main.py. Om n simuleringar 
+av 'mode = 0' önskas väljs 'mode = 1' där n väljs godtyckligt. Observera att en stor simulering kan ta 
+några minuter. Därför har 'ProcessPoolExecutor' används för att utnyttja fler processorkärnor. 
 
-Var producenter och konsumenteter placeras väljs i graph.py där CITIES respektive FACTORIES anger 
+Var producenter och konsumenteter placeras väljs i 'graph.py' där 'CITIES' respektive 'FACTORIES' anger 
 latitudinella respektive longitudinella koordinater för konsumenter respektive producenter. 
 Om en funderar på att bygga ett mellanlager som ej antas ha en egen produktion kan det väljs i 
 FACTORIES som ett extra element. 
 
-Installation
-Observera att PyVRP 0.14.0 eller senare behövs för att programmet ska kompilera. 
-Följande kommando installerar PyVRP direkt från source code på Github: 
+## Installation
+Observera att PyVRP 0.14.0 eller senare behövs. 
+Följande kommando installerar PyVRP direkt från Github: 
+'''bash
 pip install 'pyvrp @ git+https://github.com/PyVRP/PyVRP'
+'''
 
