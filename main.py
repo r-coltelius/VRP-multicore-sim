@@ -9,7 +9,7 @@ class Main:
     def simulation(_):
         g = Graph(3, 8) #Anger antalet fabriker respektive grossister
         G, pos, factory_nodes, wholesale_nodes = g.createGraph()
-        d = Distance2(G, pos, factory_nodes, wholesale_nodes, 1)
+        d = Distance(G, pos, factory_nodes, wholesale_nodes, 1)
 
         with open(os.devnull, 'w') as devnull:
             with contextlib.redirect_stdout(devnull), contextlib.redirect_stderr(devnull):

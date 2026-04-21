@@ -28,7 +28,6 @@ class Graph:
             "Jönköping":   (57.78, 14.16),
             "Norrköping":   (58.59, 16.19),
             #"Mellanlager" : (59.61, 16.54) #Ändra var du vill placera mellanlagret här. 
-            #Kommentera bort om inget mellanlager
             }
 
     def __init__(self, factories, wholesalers):
